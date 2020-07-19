@@ -1,0 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Zetta&display=swap');
+
+html, #root, .App {
+  height: 100%;
+}
+
+body {
+  font-family: 'Lexend Zetta', sans-serif;
+  background-image: linear-gradient(270deg, rgba(0, 30, 41, 0.65), rgba(197, 0, 50, 0.56)),
+  url('/background.jpg'); /* Disclaimer: I do not own this image (Source: https://wallpaperaccess.com/cute-skull)*/
+  background-repeat: no-repeat;
+  height: 100%;
+}
