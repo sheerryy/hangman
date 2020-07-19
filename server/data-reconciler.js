@@ -1,7 +1,10 @@
-const { createReadStream, writeFile } = require('fs');
+const path = require('path');
 const { createInterface } = require('readline');
+const { createReadStream, writeFile } = require('fs');
 
 const DICTIONARY_LENGTH = 30;
+const WORDS_TXT_PATH = path.join(__dirname, './words.txt');
+const DICTIONARY_JSON_PATH = path.join(__dirname, './dictionary.json');
 
 const dictionary = {
     easy: [],
@@ -16,7 +19,7 @@ const incrementCharacter = (character) => {
 
 (async function processLineByLine() {
     try {
-        const fileStream = createReadStream('words.txt');
+        const fileStream = createReadStream(WORDS_TXT_PATH);
 
         const rl = createInterface({
             input: fileStream,
@@ -64,7 +67,7 @@ const incrementCharacter = (character) => {
 
         const data = JSON.stringify(dictionary, null, 2);
 
-        writeFile('dictionary.json', data, (err) => {
+        writeFile(DICTIONARY_JSON_PATH, data, (err) => {
             if (err) throw err;
             console.log('Data written to file');
         });

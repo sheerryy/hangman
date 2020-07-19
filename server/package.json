@@ -1,0 +1,25 @@
+{
+  "name": "hangman",
+  "version": "1.0.0",
+  "description": "An MVP of Hangaman",
+  "main": "data-reconciler.js",
+  "scripts": {
+    "start:data-reconciler": "node data-reconciler.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ShehryarShoukat96/hangman.git"
+  },
+  "keywords": [
+    "Hangman"
+  ],
+  "author": "Shehryar Shoukat",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ShehryarShoukat96/hangman/issues"
+  },
+  "homepage": "https://github.com/ShehryarShoukat96/hangman#readme",
+  "dependencies": {
+  }
+}
