@@ -84,10 +84,6 @@ function Game({classes, match}: PropTypes) {
         }
     }, [tries]);
 
-    useEffect(() => {
-        console.log('alphabetMap: ', alphabetMap);
-    }, [alphabetMap]);
-
     const getHint = () => {
         socket.emit('hint', 'hint');
     };
@@ -144,21 +140,23 @@ function Game({classes, match}: PropTypes) {
                     </DialogContentText>
                 </DialogContent>
                 <DialogActions className={classes.dialogActions}>
-                    <Grid justify={'center'} style={{textAlign: 'center'}} container>
-                        <Grid md={7} xs={12}>
+                    <Grid justify={'center'} container>
+                        <Grid item md={7} xs={12}>
                             <Link style={{textDecoration: 'none'}} to={'/'}>
-                                <Button size={'medium'} variant='outlined'
+                                <Button size={'medium'}
+                                        variant='outlined'
                                         className={classes.dialogActionsButtonDanger}>
                                     Change Difficulty
                                 </Button>
                             </Link>
                         </Grid>
-                        <Grid md={5} xs={12}>
-                            <Link style={{textDecoration: 'none'}} to={`/game/${match.params.difficulty}`}>
-                                <Button size={'medium'} variant='outlined' className={classes.dialogActionsButtonSuccess}>
-                                    Try again
-                                </Button>
-                            </Link>
+                        <Grid item md={5} xs={12}>
+                            <Button size={'medium'}
+                                    onClick={() => window.location.reload()} {/*todo: reset state*/}
+                                    variant='outlined'
+                                    className={classes.dialogActionsButtonSuccess}>
+                                Try again
+                            </Button>
                         </Grid>
                     </Grid>
                 </DialogActions>

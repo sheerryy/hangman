@@ -21,7 +21,7 @@ const buttonStyle = {
     },
 };
 
-const GameStyle = ({spacing}: Theme) => createStyles({
+const GameStyle = ({spacing, breakpoints}: Theme) => createStyles({
     main: {
         color: 'white',
         textTransform: 'uppercase',
@@ -55,6 +55,9 @@ const GameStyle = ({spacing}: Theme) => createStyles({
         display: 'block',
         letterSpacing: '0.4em',
         padding: `${spacing(2)}px ${spacing(0)}px ${spacing(2)}px`,
+        [breakpoints.down('md')]: {
+            fontSize: spacing(2),
+        },
     },
     keyboard: {
         padding: spacing(2),
@@ -72,6 +75,11 @@ const GameStyle = ({spacing}: Theme) => createStyles({
         "&:hover": {
             background: "rgb(0,0,0)"
         },
+        [breakpoints.down('md')]: {
+            height: spacing(3),
+            width: spacing(2),
+            fontSize: spacing(1),
+        },
     },
     keyboardButtonSuccess: {
         height: spacing(4),
@@ -88,7 +96,12 @@ const GameStyle = ({spacing}: Theme) => createStyles({
         "&:disabled": {
             background: colors.green,
             color: 'white'
-        }
+        },
+        [breakpoints.down('md')]: {
+            height: spacing(3),
+            width: spacing(2),
+            fontSize: spacing(1),
+        },
     },
     keyboardButtonDanger: {
         height: spacing(4),
@@ -105,7 +118,12 @@ const GameStyle = ({spacing}: Theme) => createStyles({
         "&:disabled": {
             background: colors.red,
             color: 'white'
-        }
+        },
+        [breakpoints.down('md')]: {
+            height: spacing(3),
+            width: spacing(2),
+            fontSize: spacing(1),
+        },
     },
     dailog: {
         padding: spacing(1),
@@ -132,7 +150,8 @@ const GameStyle = ({spacing}: Theme) => createStyles({
     dialogActions: {
         backgroundColor: colors.darkRed,
         display: 'inline-blocks',
-        padding: spacing(2)
+        padding: spacing(2),
+        textAlign: 'center'
     },
     dialogActionsButtonSuccess: {
         height: '85%',
