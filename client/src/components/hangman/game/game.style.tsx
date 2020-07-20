@@ -1,6 +1,7 @@
 import {createStyles, Theme} from '@material-ui/core';
 
 const colors = {
+    darkRed: '#251818',
     red: 'rgba(197, 0, 50, 0.86)',
     lightRed: 'rgba(197, 0, 50, 0.15)',
     lightGrey: 'rgba(93,92,95,0.27)',
@@ -10,7 +11,7 @@ const colors = {
 
 const buttonStyle = {
     width: 'fit-content' as 'fit-content',
-    color: 'lightgrey',
+    color: 'white',
     backgroundColor: colors.lightRed,
     borderColor: colors.red,
     fontWeight: 'bolder' as 'bolder',
@@ -22,7 +23,7 @@ const buttonStyle = {
 
 const GameStyle = ({spacing}: Theme) => createStyles({
     main: {
-        color: 'lightgrey',
+        color: 'white',
         textTransform: 'uppercase',
         boxSizing: 'border-box',
         padding: spacing(2),
@@ -64,7 +65,7 @@ const GameStyle = ({spacing}: Theme) => createStyles({
         width: spacing(2),
         fontSize: spacing(1.5),
         margin: spacing(1),
-        color: 'lightgrey',
+        color: 'white',
         backgroundColor: colors.lightGrey,
         borderColor: 'rgb(0,0,0)',
         fontWeight: 'bolder',
@@ -77,26 +78,95 @@ const GameStyle = ({spacing}: Theme) => createStyles({
         width: spacing(2),
         fontSize: spacing(1.5),
         margin: spacing(1),
-        color: 'lightgrey',
+        color: 'white',
         backgroundColor: colors.lightGreen,
         borderColor: colors.green,
         fontWeight: 'bolder',
         "&:hover": {
             background: colors.green
         },
+        "&:disabled": {
+            background: colors.green,
+            color: 'white'
+        }
     },
     keyboardButtonDanger: {
         height: spacing(4),
         width: spacing(2),
         fontSize: spacing(1.5),
         margin: spacing(1),
-        color: 'lightgrey',
+        color: 'white',
         backgroundColor: colors.lightRed,
         borderColor: colors.red,
         fontWeight: 'bolder',
         "&:hover": {
             background: colors.red
         },
+        "&:disabled": {
+            background: colors.red,
+            color: 'white'
+        }
+    },
+    dailog: {
+        padding: spacing(1),
+        background: `linear-gradient(180deg, rgba(0, 30, 41, 0.75), rgba(197, 0, 50, 0.65))`,
+    },
+    dialogTitle: {
+        minwidth: '20em',
+        background: colors.red,
+        textAlign: 'center'
+    },
+    dialogTitleText: {
+        color: 'white',
+        fontSize: spacing(4),
+    },
+    dialogContent: {
+        paddingTop: spacing(4),
+        backgroundColor: colors.darkRed,
+        textAlign: 'center'
+    },
+    dialogContentText: {
+        color: 'white',
+        fontSize: spacing(2)
+    },
+    dialogActions: {
+        backgroundColor: colors.darkRed,
+        display: 'inline-blocks',
+        padding: spacing(2)
+    },
+    dialogActionsButtonSuccess: {
+        height: '85%',
+        width: 'fit-content',
+        fontSize: spacing(1.5),
+        margin: spacing(1),
+        color: 'white',
+        backgroundColor: colors.lightGreen,
+        borderColor: colors.green,
+        fontWeight: 'bolder',
+        "&:hover": {
+            background: colors.green
+        },
+        "&:disabled": {
+            background: colors.green,
+            color: 'white'
+        }
+    },
+    dialogActionsButtonDanger: {
+        height: '85%',
+        width: 'fit-content',
+        fontSize: spacing(1.5),
+        margin: spacing(1),
+        color: 'white',
+        backgroundColor: colors.lightRed,
+        borderColor: colors.red,
+        fontWeight: 'bolder',
+        "&:hover": {
+            background: colors.red
+        },
+        "&:disabled": {
+            background: colors.red,
+            color: 'white'
+        }
     }
 });
 
