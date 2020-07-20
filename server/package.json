@@ -6,7 +6,7 @@
   "scripts": {
     "start:data-reconciler": "node data-reconciler.js",
     "start": "ts-node index.ts",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest --testPathPattern .test.ts"
   },
   "repository": {
     "type": "git",
@@ -23,10 +23,13 @@
   "homepage": "https://github.com/ShehryarShoukat96/hangman#readme",
   "dependencies": {
     "@types/express": "^4.17.7",
+    "@types/jest": "^26.0.5",
     "@types/node": "^14.0.23",
     "@types/socket.io": "^2.1.8",
     "express": "^4.17.1",
+    "jest": "^26.1.0",
     "socket.io": "^2.3.0",
+    "ts-jest": "^26.1.3",
     "ts-node": "^8.10.2",
     "typescript": "^3.9.7"
   }
