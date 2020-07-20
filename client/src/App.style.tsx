@@ -9,7 +9,7 @@ const AppStyle = (theme: Theme) => ({
     game: {
         height: '560px',
         backgroundColor: '#251818',
-        color: 'grey',
+        color: 'white',
     }
 });
 
