@@ -11,6 +11,7 @@ interface PropTypes {
         difficultyText: string,
         difficultyArea: string,
         difficultyButton: string,
+        bottomText: string,
     }
 }
 
@@ -51,6 +52,9 @@ function TitleScreen({classes}: PropTypes) {
                             Impossible</Button>
                         </Link>
                     </Grid>
+                </Grid>
+                <Grid item xs={12} className={classes.bottomText}>
+                    Multiplayer coming soon!
                 </Grid>
             </Grid>
         </Grid>
