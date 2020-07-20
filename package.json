@@ -4,7 +4,7 @@
   "description": "An MVP of Hangaman",
   "main": "data-reconciler.js",
   "scripts": {
-    "start:data-reconciler": "node data-reconciler.js",
+    "start:server-reconciler": "cd server && yarn start:data-reconciler",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
