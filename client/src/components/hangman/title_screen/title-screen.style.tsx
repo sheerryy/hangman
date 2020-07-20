@@ -8,7 +8,7 @@ const colors = {
     lightGreen: 'rgba(5,197,83,0.15)',
 };
 
-const TitleScreenStyle = ({spacing}: Theme) => createStyles({
+const TitleScreenStyle = ({spacing, breakpoints}: Theme) => createStyles({
     main: {
         color: 'white',
         textTransform: 'uppercase',
@@ -23,6 +23,12 @@ const TitleScreenStyle = ({spacing}: Theme) => createStyles({
         display: 'block',
         padding: `${spacing(2)}px ${spacing(0)}px`,
         fontWeight: 'bolder',
+        [breakpoints.down('sm')]: {
+            margin: 0,
+            padding: 0,
+            width: '100%',
+            display: 'inline-table'
+        },
     },
     description: {
         fontSize: spacing(2),

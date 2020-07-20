@@ -31,22 +31,22 @@ function TitleScreen({classes}: PropTypes) {
             </Grid>
             <Grid item xs={12} className={classes.difficultyArea}>
                 <Grid container spacing={1} justify="center">
-                    <Grid item xs={7}>
+                    <Grid item sm={7} xs={10}>
                         <Link style={{textDecoration: 'none'}} to={'/game/easy'}>
                             <Button size={'large'} variant="outlined" className={classes.difficultyButton}>Easy</Button>
                         </Link>
                     </Grid>
-                    <Grid item xs={7}>
+                    <Grid item sm={7} xs={10}>
                         <Link style={{textDecoration: 'none'}} to={'/game/medium'}>
                         <Button size={'large'} variant="outlined" className={classes.difficultyButton}>Medium</Button>
                         </Link>
                     </Grid>
-                    <Grid item xs={7}>
+                    <Grid item sm={7} xs={10}>
                         <Link style={{textDecoration: 'none'}} to={'/game/hard'}>
                         <Button size={'large'} variant="outlined" className={classes.difficultyButton}>Hard</Button>
                         </Link>
                     </Grid>
-                    <Grid item xs={7}>
+                    <Grid item sm={7} xs={10}>
                         <Link style={{textDecoration: 'none'}} to={'/game/almost-impossible'}>
                         <Button size={'large'} variant="outlined" className={classes.difficultyButton}>Almost
                             Impossible</Button>
