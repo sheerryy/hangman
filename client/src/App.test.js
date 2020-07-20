@@ -1,9 +1,11 @@
 import React from 'react';
-import { render } from '@testing-library/react';
+import TestRenderer from 'react-test-renderer';
+
 import App from './App';
 
-test('renders learn react link', () => {
-  const { getByText } = render(<App />);
-  const linkElement = getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
+test('should render fine', () => {
+  const testRenderer  = TestRenderer.create(<App classes={{game: 'gameclass'}} />);
+  const testInstance = testRenderer.root;
+
+  expect(testInstance.props.classes.game).toBe('gameclass');
 });
