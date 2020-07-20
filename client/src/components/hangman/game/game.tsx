@@ -152,7 +152,7 @@ function Game({classes, match}: PropTypes) {
                         </Grid>
                         <Grid item md={5} xs={12}>
                             <Button size={'medium'}
-                                    onClick={() => window.location.reload()} {/*todo: reset state*/}
+                                    onClick={() => window.location.reload()}
                                     variant='outlined'
                                     className={classes.dialogActionsButtonSuccess}>
                                 Try again
