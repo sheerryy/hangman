@@ -10,6 +10,12 @@ const AppStyle = (theme: Theme) => ({
         height: '560px',
         backgroundColor: '#251818',
         color: 'white',
+        [theme.breakpoints.down('md')]: {
+            height: '600px',
+        },
+        [theme.breakpoints.down('sm')]: {
+            height: '90%',
+        },
     }
 });
 

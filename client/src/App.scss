@@ -10,4 +10,7 @@ body {
   url('/background.jpg'); /* Disclaimer: I do not own this image (Source: https://wallpaperaccess.com/cute-skull)*/
   background-repeat: no-repeat;
   height: 100%;
+  @media (max-width: 480px) {
+    background-repeat: repeat;
+  }
 }
