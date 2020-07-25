@@ -1,0 +1,23 @@
+version: "3.8"
+
+services:
+  server:
+    build: server/
+    ports:
+      - 3001:3001
+    networks:
+      - overlay
+
+  client:
+    build: client/
+    stdin_open: true
+    ports:
+      - 3000:3000
+    depends_on:
+      - server
+    networks:
+      - overlay
+
+networks:
+  overlay:
+    driver: bridge
