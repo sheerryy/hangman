@@ -5,7 +5,7 @@ const app: express.Application = express();
 const http = require("http").Server(app);
 const io = require("socket.io")(http);
 
-const PORT = 3001;
+const PORT = process.env.PORT || 3001;
 
 type User = {
     id: string,
