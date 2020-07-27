@@ -8,6 +8,9 @@ const getAlphabetMap = () => {
     return alphabetMap;
 };
 
+const getServerPrefix =() => '/hangman';
+
 export {
     getAlphabetMap,
+    getServerPrefix,
 }

@@ -1,7 +1,8 @@
 import socket from './socket';
-import {getAlphabetMap} from './common';
+import {getAlphabetMap, getServerPrefix} from './common';
 
 export {
     socket,
-    getAlphabetMap
+    getAlphabetMap,
+    getServerPrefix
 }
