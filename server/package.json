@@ -6,8 +6,8 @@
   "scripts": {
     "start:data-reconciler": "node data-reconciler.js",
     "start": "ts-node index.ts",
-    "test": "jest --testPathPattern .test.ts",
-    "lint": "eslint"
+    "lint": "eslint",
+    "test": "jest --testPathPattern .test.ts"
   },
   "repository": {
     "type": "git",
