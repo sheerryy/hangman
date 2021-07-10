@@ -6,6 +6,7 @@
   "scripts": {
     "start:data-reconciler": "node data-reconciler.js",
     "start": "ts-node index.ts",
+    "lint": "eslint",
     "test": "jest --testPathPattern .test.ts"
   },
   "repository": {
