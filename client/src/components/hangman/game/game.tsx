@@ -11,7 +11,9 @@ import {
 } from '@material-ui/core';
 
 import {GameStyle} from './game.style';
-import {getAlphabetMap, socket} from '../../../utils';
+import {getAlphabetMap, getServerPrefix, socket} from '../../../utils';
+
+const SERVER_PREFIX = getServerPrefix();
 
 interface PropTypes {
     classes: {
@@ -97,7 +99,7 @@ function Game({classes, match}: PropTypes) {
               justify='center'
               className={classes.main}>
             <Grid item xs={12}>
-                <Link style={{textDecoration: 'none'}} to={'/'}>
+                <Link style={{textDecoration: 'none'}} to={`${SERVER_PREFIX}/`}>
                     <Button size={'large'} variant='outlined' className={classes.backButton}>
                         Go Back
                     </Button>
@@ -108,7 +110,7 @@ function Game({classes, match}: PropTypes) {
             </Grid>
             <Grid item xs={12} className={classes.word}>
                 <div className={classes.hangman}>
-                    <img src={`/hangman-${tries}.png`} height={'180'} width={'150'} alt='Hangman not fount :('/>
+                    <img src={`${SERVER_PREFIX}/hangman-${tries}.png`} height={'180'} width={'150'} alt='Hangman not fount :('/>
                 </div>
             </Grid>
             <Grid item xs={12} className={classes.word}>
@@ -142,7 +144,7 @@ function Game({classes, match}: PropTypes) {
                 <DialogActions className={classes.dialogActions}>
                     <Grid justify={'center'} container>
                         <Grid item md={7} xs={12}>
-                            <Link style={{textDecoration: 'none'}} to={'/'}>
+                            <Link style={{textDecoration: 'none'}} to={`${SERVER_PREFIX}/`}>
                                 <Button size={'medium'}
                                         variant='outlined'
                                         className={classes.dialogActionsButtonDanger}>

@@ -7,14 +7,16 @@ import {
 
 import TitleScreen from "./title_screen";
 import Game from "./game";
+import {getServerPrefix} from "../../utils";
 
+const SERVER_PREFIX = getServerPrefix();
 
 function Hangman() {
     return (
         <Router>
             <Switch>
-                <Route exact path="/game/:difficulty" component={Game} />
-                <Route exact path="/*">
+                <Route exact path={`${SERVER_PREFIX}/game/:difficulty`} component={Game} />
+                <Route exact path={`${SERVER_PREFIX}/*`}>
                     <TitleScreen/>
                 </Route>
             </Switch>
